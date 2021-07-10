@@ -1,0 +1,36 @@
+===============================
+   SETUP ML-AGENTS FOR UNITY
+===============================
+
+1. Download MLAgents 
+	https://github.com/Unity-Technologies/ml-agents
+   - "download" for release 8
+   - unzip "ml-agents-release_8.zip", there is no install
+   - some important folders: Project, ml-agents, ml-agents-envs
+   
+2. Download Anaconda for Python
+   https://www.anaconda.com/products/individual
+   - click "64-Bit Graphical Installer (466 MB)"
+   - run the install
+   
+3. Run Anaconda Navigator (from start menu)
+   - make new environment "unity_rl"
+
+4. Run Anaconda Prompt (from start menu)
+   - type "conda activate unity_rl" [enter]
+   - install ml-agents
+     type "pip install -e ml-agents" [enter]
+   - install ml-agents-envs
+     type "pip install -e ml-agents-envs" [enter]
+   - verify install works
+     type "mlagents-learn" [enter]
+	 you should see ascii unity words
+	 
+5. In Unity Project add MLAgents package
+   - you will get an MLAgents folder created in your project
+   - script should be able to add "using Unity.MLAgent"
+   
+6. MLAgents unzipped folder
+   - you should be able to open Projects in Unity
+   - you should be able to run the example scenes
+   

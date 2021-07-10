@@ -1,0 +1,41 @@
+Train an MLAgent
+================
+1. Ensure 
+	- MLAgents source (Python)
+	- Anaconda environment (MLAgent)
+   
+2. Unity project
+	- MLAgent (Package Manager)
+
+3. Make simple one player game
+	- road
+	- jumping player
+	- moving obstacle
+
+4. Convert player Monobehaviour > Agent script
+	- override Initialize()
+	- override OnActionReceived()
+	- override OnEpisodeBegin()
+	- override Heuristic()
+	- AddReward() : when punishment call EndEpisode()
+	- RequestDecision() : Decision Requester script
+	- Behavior Parameters :
+		Vector Observation > SpaceSize 0, StackedVectors 1
+		Vector Action      > BranchesSize 1, Branch0Size 2
+	- Ray Perception Sensor 3D : 
+		Detectable Tags    > Size 1, Element0 obstacle
+
+5. MLAgent Training
+	- Anacoda prompt: type "mlagents-learn" [enter]
+	- Press play in Unity
+	- wait...
+
+6. Training Output
+	- Press Stop Unity
+	- Brain file (neural network *.nn)
+	- configuration.yaml file
+
+7. Add (*.nn) to Unity project
+   Specify (*.nn) on MLAgent agent script
+   Press play in Unity, to see MLAgent in action
+
